@@ -3,7 +3,7 @@ include ("../scriptphp/backend.php");
 include ("../scriptphp/frontend.php");
 
 if(isset($_POST["Valider"])){
-    
+    print_r ($_POST["StartTime"]);
 }
 ?>
 <!DOCTYPE html>
