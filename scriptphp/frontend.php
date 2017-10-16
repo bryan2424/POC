@@ -10,4 +10,8 @@ function showEvents($eventsTime){
     $result .= "</table>";
     echo $result;
 }
+
+function genRecap(){
+    
+}
 ?>
