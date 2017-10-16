@@ -1,9 +1,9 @@
-<?php
+ï»¿<?php
 include("backend.php");
 
 function showEvents(){
     $events = getEvents();
-    $result = "<table border='1'><tr><th>Événement</th><th>Date</th><th>Commence à</th><th>Finit à</th></tr>";
+    $result = "<table border='1'><tr><th>Ã‰vÃ©nement</th><th>Date</th><th>Commence Ã </th><th>Finit Ã </th></tr>";
     foreach($events as $value){
         $result .= '<tr><td>'.$value["eventName"].'</td><td>'.$value["eventDate"].'</td><td>'.$value["eventStart"].'</td><td>'.$value["eventEnd"].'</td></tr>';
     }
