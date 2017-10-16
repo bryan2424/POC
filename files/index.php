@@ -32,9 +32,9 @@ include ("../scriptphp/frontend.php");
         </nav>
 
         <!-- form -->
-
-        <div id="main" class="container">
+        <div  class="container">
             <h1>POC</h1>
+            <div id="main">
             <form method="POST" action="confirmation.php">
                 <div class="col-xs-2" style="margin-top: 20px;">
                     <label for="titre" style="margin-top: 8px;">Titre :</label>
@@ -87,6 +87,7 @@ include ("../scriptphp/frontend.php");
                     <input type="submit" name="Valider" class="form-control"/>
                 </div>
             </form>
+        </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
