@@ -9,6 +9,9 @@ if (isset($_REQUEST["titre"],$_REQUEST["date"],$_REQUEST["StartTime"],$_REQUEST[
         define("EVENT_END",$_REQUEST["EndTime"]);
         $recap = genRecap(EVENT_TITLE, EVENT_DATE, EVENT_START, EVENT_END);
     }
+    else{
+        header("Location: index.php");
+    }
 }
 ?>
 <!DOCTYPE html>
