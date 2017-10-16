@@ -1,17 +1,13 @@
 <?php
 include ("../scriptphp/backend.php");
 include ("../scriptphp/frontend.php");
-
-if(isset($_POST["Valider"])){
-    print_r ($_POST["StartTime"]);
-}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>titre</title>
         <meta charset="utf-8" />
-        <meta name="viewpodwdddwrt" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="../bootstrap/clockpicker/bootstrap-clockpicker.min.css">
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
@@ -25,10 +21,10 @@ if(isset($_POST["Valider"])){
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nom Utilisateur
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">liste des rdv</a></li>
+                            <li><a href="events.php">liste des rdv</a></li>
                         </ul>
                     </li>
                 </ul>
