@@ -38,4 +38,9 @@ function addEvent($eventTitle,$eventDate,$eventStart,$eventEnd){
     $req->execute();
 }
 
+function deleteEvent($idEvent){
+    $connect = connectDB();
+    $req = $connect->prepare("DELETE FROM T_EVENTS WHERE idEvent = ".$idEvent);
+    $req->execute();
+}
 ?>
