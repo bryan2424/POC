@@ -21,7 +21,7 @@ function getEvents($eventsTime){
         if ($eventsTime == true) {
             $req = $connect->prepare("SELECT * FROM T_EVENTS WHERE eventDate < '".$date."' OR eventDate = '".$date."' AND eventEnd <= '".$time."'");
         }
-        else{
+        if($eventsTime == false){
             $req = $connect->prepare("SELECT * FROM T_EVENTS WHERE eventDate > '".$date."' OR eventDate = '".$date."' AND eventStart <= '".$time."' AND eventEnd >'".$time."'");
         }
         $req->execute();
