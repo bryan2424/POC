@@ -16,14 +16,13 @@ function connectDB(){
 function getEvents(){
     try {
         $connect = connectDB();
-        $req = $connect->prepare("SELECT * FROM T_EVENTS");
+        $req = $connect->prepare("SELECT * FROM T_EVENTS ORDER BY eventDate ");
         $req->execute();
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
     } catch (Exception $e) {
         throw $e;
     }
     return $result;
-    
 }
 
 function addEvent($titre,$date,$heureDebut,$heureFin){
