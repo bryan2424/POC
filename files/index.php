@@ -1,11 +1,14 @@
 <?php
-if(isset($_POST["Valider"]))
-
+require_once "backend.php";
+require_once "frontend.php";
+if(isset($_POST["Valider"])){
+    
+}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calendrier</title>
+        <title>titre</title>
         <meta charset="utf-8" />
         <meta name="viewpodwdddwrt" content="width=device-width, initial-scale=1.0">
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -28,16 +31,13 @@ if(isset($_POST["Valider"]))
                         </ul>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                </ul>
             </div>
         </nav>
 
         <!-- form -->
 
         <div id="main" class="container">
-            <h1>Calendrier</h1>
+            <h1>POC</h1>
             <form method="POST" action="#">
                 <div class="col-xs-2" style="margin-top: 20px;">
                     <label for="titre" style="margin-top: 8px;">Titre :</label>

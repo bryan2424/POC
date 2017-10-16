@@ -30,8 +30,8 @@ function addEvent($titre,$date,$heureDebut,$heureFin){
     $requete = $connexion->prepare("INSERT INTO T_EVENTS () VALUES(:titre,:date,:heureDebut,:heureFin)");
     $requete->bindparam(':titre', $nom, PDO::PARAM_STR);
     $requete->bindparam(':date', $nom, PDO::PARAM_STR);
-    $requete->bindparam(':heureDebut', $nom, PDO::PARAM_STR);
-    $requete->bindparam(':heureFin', $nom, PDO::PARAM_STR);
+    $requete->bindparam(':heureDebut', $nom);
+    $requete->bindparam(':heureFin', $nom);
     $requete->execute();
 }
 ?>
