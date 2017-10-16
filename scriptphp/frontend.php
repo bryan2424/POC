@@ -1,5 +1,5 @@
-﻿<?php
-include("backend.php");
+<?php
+require_once '/backend.php';
 
 function showEvents($eventsTime){
     $events = getEvents($eventsTime);

@@ -1,6 +1,6 @@
 <?php
 include ("../scriptphp/backend.php");
-require_once "../scriptphp/frontend.php";
+include ("../scriptphp/frontend.php");
 
 if(isset($_POST["Valider"])){
     
