@@ -13,10 +13,17 @@ function connectDB(){
     return $db;
 }
 
-function getEvents(){
+function getEvents($eventsTime){
     try {
         $connect = connectDB();
-        $req = $connect->prepare("SELECT * FROM T_EVENTS ORDER BY eventDate ASC");
+        $date = date("Y-m-d");
+        $time = date("H:i:s");
+        if ($eventsTime == true) {
+            $req = $connect->prepare("SELECT * FROM T_EVENTS WHERE eventDate < '".$date."' OR eventDate = '".$date."' AND eventEnd <= '".$time."'");
+        }
+        else{
+            $req = $connect->prepare("SELECT * FROM T_EVENTS WHERE eventDate > '".$date."' OR eventDate = '".$date."' AND eventStart <= '".$time."' AND eventEnd >'".$time."'");
+        }
         $req->execute();
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
     } catch (Exception $e) {

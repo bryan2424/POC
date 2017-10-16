@@ -8,8 +8,13 @@ include("../scriptPhp/frontend.php");
         <meta charset="utf-8" />
     </head>
     <body>
+        <h1>Événements courants ou futurs :</h1>
         <?php
-        showEvents();
+        showEvents(false);
+        ?>
+        <h1>Événements passés :</h1>
+        <?php
+        showEvents(true);
         ?>
     </body>
 </html>
