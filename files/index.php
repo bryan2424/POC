@@ -39,7 +39,7 @@ if(isset($_POST["Valider"])){
 
         <div id="main" class="container">
             <h1>POC</h1>
-            <form method="POST" action="#">
+            <form method="POST" action="confirmation.php">
                 <div class="col-xs-2" style="margin-top: 20px;">
                     <label for="titre" style="margin-top: 8px;">Titre :</label>
                 </div>

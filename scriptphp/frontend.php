@@ -1,5 +1,5 @@
 <?php
-require_once '/backend.php';
+require_once 'backend.php';
 
 function showEvents($eventsTime){
     $events = getEvents($eventsTime);
@@ -11,7 +11,8 @@ function showEvents($eventsTime){
     echo $result;
 }
 
-function genRecap(){
-    
+function genRecap($eventTitle,$eventDate,$eventStart,$eventEnd){
+    $result = "<table><tr><td>Nom de l'événement :</td><td>".$eventTitle."</td></tr><tr><td>Date prévue :</td><td>".$eventDate."</td></tr><tr><td>Heure de début :</td><td>".$eventStart."</td></tr><tr><td>Heure de fin :</td><td>".$eventEnd."</td></tr>";
+    return $result;
 }
 ?>
