@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include("../scriptPhp/frontend.php");
 ?>
 <!DOCTYPE html>
