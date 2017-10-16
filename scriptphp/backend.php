@@ -32,13 +32,10 @@ function getEvents($eventsTime){
     return $result;
 }
 
-function addEvent($titre,$date,$heureDebut,$heureFin){
-    $connexion = connectDB();
-    $requete = $connexion->prepare("INSERT INTO T_EVENTS () VALUES(:titre,:date,:heureDebut,:heureFin)");
-    $requete->bindparam(':titre', $nom, PDO::PARAM_STR);
-    $requete->bindparam(':date', $nom, PDO::PARAM_STR);
-    $requete->bindparam(':heureDebut', $nom);
-    $requete->bindparam(':heureFin', $nom);
-    $requete->execute();
+function addEvent($eventTitle,$eventDate,$eventStart,$eventEnd){
+    $connect = connectDB();
+    $req = $connect->prepare("INSERT INTO T_EVENTS (eventName,eventDate,eventStart,eventEnd) VALUES('".$eventTitle."','".$eventDate."','".$eventStart."','".$eventEnd."')");
+    $req->execute();
 }
+
 ?>
