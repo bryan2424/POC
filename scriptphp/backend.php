@@ -33,14 +33,22 @@ function getEvents($eventsTime){
 }
 
 function addEvent($eventTitle,$eventDate,$eventStart,$eventEnd){
-    $connect = connectDB();
-    $req = $connect->prepare("INSERT INTO T_EVENTS (eventName,eventDate,eventStart,eventEnd) VALUES('".$eventTitle."','".$eventDate."','".$eventStart."','".$eventEnd."')");
-    $req->execute();
+    try {
+        $connect = connectDB();
+        $req = $connect->prepare("INSERT INTO T_EVENTS (eventName,eventDate,eventStart,eventEnd) VALUES('".$eventTitle."','".$eventDate."','".$eventStart."','".$eventEnd."')");
+        $req->execute();
+    } catch (Exception $e) {
+        throw $e;
+    }
 }
 
 function deleteEvent($idEvent){
-    $connect = connectDB();
-    $req = $connect->prepare("DELETE FROM T_EVENTS WHERE idEvent = '".$idEvent."'");
-    $req->execute();
+    try {
+        $connect = connectDB();
+        $req = $connect->prepare("DELETE FROM T_EVENTS WHERE idEvent = '".$idEvent."'");
+        $req->execute();
+    } catch (Exception $e) {
+        throw $e;
+    }
 }
 ?>
