@@ -2,3 +2,8 @@ body
 {
     text-align: center;
 }
+.addtocalendar{
+    width:200px;
+    margin-top:5px;
+    display:block;
+}
