@@ -33,22 +33,29 @@ function getEvents($eventsTime) {
     return $result;
 }
 
-function addEvent($eventTitle, $eventDate, $eventStart, $eventEnd) {
-    $connect = connectDB();
-    $req = $connect->prepare("INSERT INTO T_EVENTS (eventName,eventDate,eventStart,eventEnd) VALUES('" . $eventTitle . "','" . $eventDate . "','" . $eventStart . "','" . $eventEnd . "')");
-    $req->execute();
-}
-
-function deleteEvent($idEvent) {
-    $connect = connectDB();
-    $req = $connect->prepare("DELETE FROM T_EVENTS WHERE idEvent = '" . $idEvent . "'");
-    $req->execute();
-}
 
 function exportEvent($idEvent, $eventTitle, $eventDate, $eventStart, $eventEnd) {
     $connect = connectDB();
     $req = $connect->prepare("SELECT * FROM T_EVENTS WHERE idEvent = '" . $idEvent . "'");
     $req->execute();
+function addEvent($eventTitle,$eventDate,$eventStart,$eventEnd){
+    try {
+        $connect = connectDB();
+        $req = $connect->prepare("INSERT INTO T_EVENTS (eventName,eventDate,eventStart,eventEnd) VALUES('".$eventTitle."','".$eventDate."','".$eventStart."','".$eventEnd."')");
+        $req->execute();
+    } catch (Exception $e) {
+        throw $e;
+    }
+}
+
+function deleteEvent($idEvent){
+    try {
+        $connect = connectDB();
+        $req = $connect->prepare("DELETE FROM T_EVENTS WHERE idEvent = '".$idEvent."'");
+        $req->execute();
+    } catch (Exception $e) {
+        throw $e;
+    }
 }
 ?>
 <script>

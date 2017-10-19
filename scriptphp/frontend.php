@@ -14,6 +14,7 @@ function showEvents($eventsTime) {
     echo $result;
 }
 
+<<<<<<< HEAD
 function exportButton() {
     ?>
     <script>
@@ -36,6 +37,10 @@ function exportButton() {
 
 function genRecap($eventTitle, $eventDate, $eventStart, $eventEnd) {
     $result = "<form method='POST' action='../scriptphp/scriptConfirmation.php'><input type='hidden' name='eventName' value='" . $eventTitle . "'><input type='hidden' name='eventDate' value='" . $eventDate . "'><input type='hidden' name='eventStart' value='" . $eventStart . "'><input type='hidden' name='eventEnd' value='" . $eventEnd . "'><table><tr><td>Nom de l'événement :</td><td>" . $eventTitle . "</td></tr><tr><td>Date prévue :</td><td>" . $eventDate . "</td></tr><tr><td>Heure de début :</td><td>" . $eventStart . "</td></tr><tr><td>Heure de fin :</td><td>" . $eventEnd . "</td></tr><tr><td><input type='submit'></td></tr></table></form>";
+=======
+function genRecap($eventTitle,$eventDate,$eventStart,$eventEnd){
+    $result = "<form method='POST' action='../scriptphp/scriptConfirmation.php'><input type='hidden' name='eventName' value='".$eventTitle."'><input type='hidden' name='eventDate' value='".$eventDate."'><input type='hidden' name='eventStart' value='".$eventStart."'><input type='hidden' name='eventEnd' value='".$eventEnd."'><table><tr><td>Nom de l'événement :</td><td>".$eventTitle."</td></tr><tr><td>Date prévue :</td><td>".$eventDate."</td></tr><tr><td>Heure de début :</td><td>".$eventStart."</td></tr><tr><td>Heure de fin :</td><td>".$eventEnd."</td></tr><tr><td><input type='submit'><input type=\"button\" onclick=\"window.location.replace('index.php')\" value=\"Annuler\" /></td></tr></table></form>";
+>>>>>>> 42f327121a77c6211f125cdc387520bb5cb959f4
     return $result;
 }
 ?>
